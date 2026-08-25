@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ESP32 Home Automation</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🏠 Smart Home</h1>
+        <p>ESP32 Home Automation System</p>
+    </header>
+
+    <main>
+
+        <div class="device-card">
+            <h2>💡 Light 1</h2>
+
+            <p>Status: <span id="light1-status">OFF</span></p>
+
+            <button onclick="controlDevice('light1', 'on')">
+                ON
+            </button>
+
+            <button onclick="controlDevice('light1', 'off')">
+                OFF
+            </button>
+        </div>
+
+
+        <div class="device-card">
+            <h2>💡 Light 2</h2>
+
+            <p>Status: <span id="light2-status">OFF</span></p>
+
+            <button onclick="controlDevice('light2', 'on')">
+                ON
+            </button>
+
+            <button onclick="controlDevice('light2', 'off')">
+                OFF
+            </button>
+        </div>
+
+
+        <div class="device-card">
+            <h2>🌀 Fan</h2>
+
+            <p>Status: <span id="fan-status">OFF</span></p>
+
+            <button onclick="controlDevice('fan', 'on')">
+                ON
+            </button>
+
+            <button onclick="controlDevice('fan', 'off')">
+                OFF
+            </button>
+        </div>
+
+
+        <div class="device-card">
+            <h2>🔌 Appliance</h2>
+
+            <p>Status: <span id="appliance-status">OFF</span></p>
+
+            <button onclick="controlDevice('appliance', 'on')">
+                ON
+            </button>
+
+            <button onclick="controlDevice('appliance', 'off')">
+                OFF
+            </button>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
