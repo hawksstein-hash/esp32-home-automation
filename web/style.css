@@ -6,82 +6,324 @@
 
 body {
     font-family: Arial, sans-serif;
+
     min-height: 100vh;
+
     background: #0f172a;
+
     color: white;
 }
 
-header {
-    text-align: center;
-    padding: 50px 20px 30px;
-}
 
-header h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
-}
+/* HEADER */
 
-header p {
-    color: #94a3b8;
-    font-size: 18px;
-}
+.header {
 
-main {
     width: 90%;
-    max-width: 1000px;
+    max-width: 1100px;
+
     margin: auto;
 
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+    padding: 35px 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
 }
 
-.device-card {
-    background: #1e293b;
-    border-radius: 20px;
-    padding: 30px;
+.header h1 {
+    font-size: 38px;
 
-    text-align: center;
-
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    margin-bottom: 5px;
 }
 
-.device-card h2 {
-    margin-bottom: 20px;
-}
-
-.device-card p {
+.header p {
     color: #94a3b8;
-    margin-bottom: 20px;
-}
-
-button {
-    border: none;
-    border-radius: 10px;
-
-    padding: 12px 25px;
-    margin: 5px;
 
     font-size: 16px;
+}
+
+
+/* CONNECTION */
+
+.connection {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    background: #1e293b;
+
+    padding: 10px 18px;
+
+    border-radius: 30px;
+
+    color: #cbd5e1;
+}
+
+.connection-dot {
+
+    width: 10px;
+    height: 10px;
+
+    background: #22c55e;
+
+    border-radius: 50%;
+}
+
+
+/* DASHBOARD */
+
+.dashboard {
+
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+
+/* OVERVIEW */
+
+.overview {
+
+    background: #1e293b;
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    margin-bottom: 25px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.overview p {
+
+    color: #94a3b8;
+
+    margin-bottom: 5px;
+}
+
+.overview h2 {
+
+    font-size: 32px;
+}
+
+
+/* MASTER BUTTONS */
+
+.master-controls {
+
+    display: flex;
+
+    gap: 10px;
+}
+
+.master-controls button {
+
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 10px;
+
     font-weight: bold;
 
     cursor: pointer;
 
-    background: #334155;
     color: white;
 }
 
-button:hover {
+.master-on {
+
+    background: #16a34a;
+}
+
+.master-off {
+
+    background: #dc2626;
+}
+
+
+/* DEVICE GRID */
+
+.devices {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+/* DEVICE CARD */
+
+.device-card {
+
+    background: #1e293b;
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    transition: 0.2s;
+}
+
+.device-card:hover {
+
+    transform: translateY(-3px);
+
+    background: #263449;
+}
+
+
+/* ICON */
+
+.device-icon {
+
+    font-size: 42px;
+
+    background: #334155;
+
+    width: 70px;
+
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 15px;
+}
+
+
+/* DEVICE INFO */
+
+.device-info {
+
+    flex: 1;
+}
+
+.device-info h2 {
+
+    margin-bottom: 8px;
+}
+
+.device-info p {
+
+    color: #94a3b8;
+}
+
+
+/* STATUS */
+
+.status-on {
+
+    color: #22c55e;
+
+    font-weight: bold;
+}
+
+.status-off {
+
+    color: #ef4444;
+
+    font-weight: bold;
+}
+
+
+/* CONTROLS */
+
+.controls {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+.controls button {
+
+    border: none;
+
+    padding: 8px 16px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    background: #334155;
+
+    color: white;
+
+    font-weight: bold;
+}
+
+.controls button:hover {
+
     background: #475569;
 }
 
+
+/* FOOTER */
+
+footer {
+
+    text-align: center;
+
+    padding: 40px;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+/* MOBILE */
+
 @media (max-width: 700px) {
 
-    main {
+    .header {
+
+        flex-direction: column;
+
+        gap: 20px;
+
+        text-align: center;
+    }
+
+    .devices {
+
         grid-template-columns: 1fr;
     }
 
-    header h1 {
-        font-size: 32px;
+    .overview {
+
+        flex-direction: column;
+
+        gap: 20px;
+
+        text-align: center;
     }
+
 }

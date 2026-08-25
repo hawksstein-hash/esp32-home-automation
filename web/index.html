@@ -1,85 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ESP32 Home Automation</title>
+    <title>Smart Home | ESP32</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>🏠 Smart Home</h1>
-        <p>ESP32 Home Automation System</p>
+    <header class="header">
+
+        <div>
+            <h1>🏠 Smart Home</h1>
+            <p>ESP32 Home Automation</p>
+        </div>
+
+        <div class="connection">
+            <span class="connection-dot"></span>
+            <span>ESP32 Connected</span>
+        </div>
+
     </header>
 
-    <main>
 
-        <div class="device-card">
-            <h2>💡 Light 1</h2>
+    <section class="dashboard">
 
-            <p>Status: <span id="light1-status">OFF</span></p>
+        <div class="overview">
 
-            <button onclick="controlDevice('light1', 'on')">
-                ON
-            </button>
+            <div>
+                <p>Devices ON</p>
+                <h2 id="devices-on">0</h2>
+            </div>
 
-            <button onclick="controlDevice('light1', 'off')">
-                OFF
-            </button>
+            <div class="master-controls">
+
+                <button class="master-on" onclick="controlAll('on')">
+                    ALL ON
+                </button>
+
+                <button class="master-off" onclick="controlAll('off')">
+                    ALL OFF
+                </button>
+
+            </div>
+
         </div>
 
 
-        <div class="device-card">
-            <h2>💡 Light 2</h2>
+        <div class="devices">
 
-            <p>Status: <span id="light2-status">OFF</span></p>
 
-            <button onclick="controlDevice('light2', 'on')">
-                ON
-            </button>
+            <!-- LIGHT 1 -->
 
-            <button onclick="controlDevice('light2', 'off')">
-                OFF
-            </button>
+            <div class="device-card">
+
+                <div class="device-icon">
+                    💡
+                </div>
+
+                <div class="device-info">
+
+                    <h2>Light 1</h2>
+
+                    <p>
+                        Status:
+                        <span id="light1-status" class="status-off">
+                            OFF
+                        </span>
+                    </p>
+
+                </div>
+
+                <div class="controls">
+
+                    <button onclick="controlDevice('light1', 'on')">
+                        ON
+                    </button>
+
+                    <button onclick="controlDevice('light1', 'off')">
+                        OFF
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- LIGHT 2 -->
+
+            <div class="device-card">
+
+                <div class="device-icon">
+                    💡
+                </div>
+
+                <div class="device-info">
+
+                    <h2>Light 2</h2>
+
+                    <p>
+                        Status:
+                        <span id="light2-status" class="status-off">
+                            OFF
+                        </span>
+                    </p>
+
+                </div>
+
+                <div class="controls">
+
+                    <button onclick="controlDevice('light2', 'on')">
+                        ON
+                    </button>
+
+                    <button onclick="controlDevice('light2', 'off')">
+                        OFF
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- FAN -->
+
+            <div class="device-card">
+
+                <div class="device-icon">
+                    🌀
+                </div>
+
+                <div class="device-info">
+
+                    <h2>Fan</h2>
+
+                    <p>
+                        Status:
+                        <span id="fan-status" class="status-off">
+                            OFF
+                        </span>
+                    </p>
+
+                </div>
+
+                <div class="controls">
+
+                    <button onclick="controlDevice('fan', 'on')">
+                        ON
+                    </button>
+
+                    <button onclick="controlDevice('fan', 'off')">
+                        OFF
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- APPLIANCE -->
+
+            <div class="device-card">
+
+                <div class="device-icon">
+                    🔌
+                </div>
+
+                <div class="device-info">
+
+                    <h2>Appliance</h2>
+
+                    <p>
+                        Status:
+                        <span id="appliance-status" class="status-off">
+                            OFF
+                        </span>
+                    </p>
+
+                </div>
+
+                <div class="controls">
+
+                    <button onclick="controlDevice('appliance', 'on')">
+                        ON
+                    </button>
+
+                    <button onclick="controlDevice('appliance', 'off')">
+                        OFF
+                    </button>
+
+                </div>
+
+            </div>
+
         </div>
 
-
-        <div class="device-card">
-            <h2>🌀 Fan</h2>
-
-            <p>Status: <span id="fan-status">OFF</span></p>
-
-            <button onclick="controlDevice('fan', 'on')">
-                ON
-            </button>
-
-            <button onclick="controlDevice('fan', 'off')">
-                OFF
-            </button>
-        </div>
+    </section>
 
 
-        <div class="device-card">
-            <h2>🔌 Appliance</h2>
+    <footer>
 
-            <p>Status: <span id="appliance-status">OFF</span></p>
+        <p>
+            ESP32 Web-Based Home Automation
+        </p>
 
-            <button onclick="controlDevice('appliance', 'on')">
-                ON
-            </button>
+    </footer>
 
-            <button onclick="controlDevice('appliance', 'off')">
-                OFF
-            </button>
-        </div>
-
-    </main>
 
     <script src="script.js"></script>
 
 </body>
+
 </html>
