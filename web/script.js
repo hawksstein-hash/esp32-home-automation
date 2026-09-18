@@ -9,7 +9,7 @@ const devices = {
 
 
 // ESP32 IP address
-const ESP32_IP = "192.168.15.128";
+const ESP32_IP = "192.168.15.116";
 
 
 // Map website devices to ESP32 routes
